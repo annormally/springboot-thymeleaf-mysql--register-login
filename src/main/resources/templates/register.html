@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot - Thymeleaf - MySQL -- Login</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<div id="wrapper">
+    <!-- Navigator -->
+    <div id="navigator">
+        <nav>
+            <div class="navbar">
+                <!-- Logo | Alt text if not exist a logo -->
+                <div class="navbar-banner">
+                    <a class="white" href=""><img src="" alt="Logo"></a>
+                </div>
+                <div class="nav-links">
+                    <div class="link"><a class="button-type-1" href="/register" title="Register">Register</a></div>
+                    <div class="link"><a class="button-type-1" href="/login" title="Login">Login</a></div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <form method="post" action="/register" th:object="${user}">
+            <div class="container-grid">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" th:field="*{username}">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" th:field="*{email}">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" th:field="*{password}">
+                <button class="button-type-1" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<footer id="footer">
+    <div id="footer-content">
+        <p>Copyright ©2022 All rights reserved |</p>
+        <p title="Popa Catalin">&nbsp;Popa Catalin</p>
+    </div>
+</footer>
+</body>
+</html>
